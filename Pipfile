@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 pytest = "<8.0.0"
 mock = "4.0.3"
-hypothesis = "6.54.3"
+hypothesis = "6.54.4"
 hypothesis_jsonschema = "0.22.0"
 jsonschema2md = "0.4.0"
 PyYAML = "5.4.1"
@@ -14,8 +14,8 @@ pre-commit = "2.20.0"
 # Please keep the following in-sync /w .pre-commit-config.yaml
 flake8 = "5.0.4"
 isort = "5.10.1"
-pylint = "2.14.5"
-black = "22.6.0"
+pylint = "2.15.0"
+black = "22.8.0"
 yamllint = "1.27.1"
 # vscode LSP
 jedi = "*"
