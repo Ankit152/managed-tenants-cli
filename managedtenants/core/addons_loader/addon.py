@@ -250,14 +250,18 @@ class Addon:
                 f" {self.imagesets_path}"
             )
 
+        valid_imagesets = self.load_imagesets()
+        imageset = self.get_target_imageset(imagesets_iter=valid_imagesets)
+        self._validate_schema_instance(imageset, "imageset")
+        return imageset
+
+    def load_imagesets(self):
         def is_not_none(arg):
             return arg is not None
 
         imageset_yamls = map(self.load_yaml, self.get_available_imagesets())
         valid_imagesets = filter(is_not_none, imageset_yamls)
-        imageset = self.get_target_imageset(imagesets_iter=valid_imagesets)
-        self._validate_schema_instance(imageset, "imageset")
-        return imageset
+        return valid_imagesets
 
     def get_available_imagesets(self):
         imageset_files = (
