@@ -20,6 +20,6 @@ class LazyBin:
         self.instance.run(*cmd)
 
 
-OPM = LazyBin(Opm, version="1.24.0", download_path="/tmp")
-MTCLI = LazyBin(Mtcli, version="0.10.0", download_path="/tmp")
-OPERATOR_SDK = LazyBin(OperatorSDK, version="1.21.0", download_path="/tmp")
+OPM = LazyBin(Opm, version="1.45.0", download_path="/tmp")
+MTCLI = LazyBin(Mtcli, version="0.20.1", download_path="/tmp")
+OPERATOR_SDK = LazyBin(OperatorSDK, version="1.36.0", download_path="/tmp")
